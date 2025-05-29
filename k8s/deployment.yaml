@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-fastapi-deployment
+  labels:
+    app: hello-fastapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-fastapi
+  template:
+    metadata:
+      labels:
+        app: hello-fastapi
+    spec:
+      containers:
+      - name: fastapi
+        image: tiangolo/uvicorn-gunicorn-fastapi:python3.9  # imagem oficial FastAPI com uvicorn
+        ports:
+        - containerPort: 80
