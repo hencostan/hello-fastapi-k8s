@@ -6,4 +6,4 @@ resources:
 images:
 - name: hello-fastapi
   newName: henriquecostan/hello-fastapi-k8s
-  newTag: e136df2bba7ea6cb9c4f05ffca75465256520ec0
+  newTag: 660324e07258a53c824fc5c48d6f5acdc855b37c
